@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/xm-zero-swaps/static/css/main.b3530178.css",
+    "main.css": "/xm-zero-swaps/static/css/main.d638c9cc.css",
     "main.js": "/xm-zero-swaps/static/js/main.ea00759c.js",
     "static/js/787.b665f673.chunk.js": "/xm-zero-swaps/static/js/787.b665f673.chunk.js",
     "static/media/top-sprite-right-desktop.png": "/xm-zero-swaps/static/media/top-sprite-right-desktop.e7eae8db7292db1dc4c3.png",
@@ -58,12 +58,12 @@
     "static/media/ltc.svg": "/xm-zero-swaps/static/media/ltc.255490918ef59a877efd.svg",
     "static/media/arrow-up-icon.svg": "/xm-zero-swaps/static/media/arrow-up-icon.f1511f6b84d45b2513d9.svg",
     "static/media/arrow-down-icon.svg": "/xm-zero-swaps/static/media/arrow-down-icon.31ef875a5d79b6ce404d.svg",
-    "main.b3530178.css.map": "/xm-zero-swaps/static/css/main.b3530178.css.map",
+    "main.d638c9cc.css.map": "/xm-zero-swaps/static/css/main.d638c9cc.css.map",
     "main.ea00759c.js.map": "/xm-zero-swaps/static/js/main.ea00759c.js.map",
     "787.b665f673.chunk.js.map": "/xm-zero-swaps/static/js/787.b665f673.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3530178.css",
+    "static/css/main.d638c9cc.css",
     "static/js/main.ea00759c.js"
   ]
 }
