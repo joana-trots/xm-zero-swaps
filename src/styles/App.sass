@@ -58,10 +58,12 @@ b, strong
     @include media(">=1024px")
         height: 257px
 .container
+    position: relative
     width: 100%
     max-width: 290px
     margin: 0 auto
     padding: 0 10px
+    z-index: 1
     @include media(">phone")
         max-width: 666px
         margin: 0 auto
