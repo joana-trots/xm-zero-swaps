@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# XM | ZERO SWAPS
 
 Live:
 https://joana-trots.github.io/xm-zero-swaps
