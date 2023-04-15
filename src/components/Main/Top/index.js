@@ -13,7 +13,7 @@ const Top = () => {
                     <p className="small-text">Terms and Conditions apply<span className="red-text">*</span>. To read the full T&Cs, <a className="red-text" href="#" title="Read T&C">click here.</a></p>
                 </div> 
             </div>
-            <div className='bg'>
+            <div className='bg-top'>
                 <div className='top__image-bg--tint bg-img'></div>
                 <div className='top__image-bg--sprite-left bg-img'></div>
                 <div className='top__image-bg--sprite-right bg-img'></div>
