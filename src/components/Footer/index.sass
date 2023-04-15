@@ -1,0 +1,57 @@
+@import ../../styles/_vars
+
+.footer .container
+    padding: 0 30px
+    @include media("<=phone")
+        max-width: 100%
+.footer__inner
+    align-items: stretch
+    justify-content: center
+.footer__inner--secondary
+    display: none
+    @include media(">=1024px")
+        display: flex
+        padding: 30px 0
+        justify-content: space-between
+        border-bottom: 1px solid #444444
+.footer__partners,
+.footer__social,
+.footer-menu__list,
+.footer__inner--primary
+    display: flex
+    align-items: center
+.footer__inner--primary
+    justify-content: space-between
+    padding: 11px 0
+    @include media("<=800px")
+        flex-direction: column
+        gap: 24px
+.footer__partners
+    gap: 58px
+    img:nth-child(1)    
+        max-width: 136px
+    img:nth-child(2)    
+        max-width: 131px
+    img:nth-child(3)    
+        max-width: 110px
+    img:nth-child(4)    
+        max-width: 195px
+    @include media("<=1080px")
+        gap: 32px
+.footer__social
+    font-size: 12px
+    font-weight: 500
+    line-height: 17px
+    color: #888
+    display: flex
+    gap: 14px
+.footer__logo img
+    max-width: 182px
+.footer-menu
+    color: #888
+    &__list--link
+        font-size: 12px
+        line-height: 17px
+    
+
+    

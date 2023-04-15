@@ -1,0 +1,76 @@
+@import ../../../styles/_vars
+
+.big-fair-human
+    background-color: $white
+    .container
+        padding: 60px 0 70px
+        @include media(">=660px", "<desktop")
+            max-width: 600px
+        @include media(">=desktop")
+            max-width: 1200px
+            padding: 90px 55px
+    &__inner
+        @include media(">=desktop")  
+            flex-direction: row  
+    h5
+        text-align: center  
+    h6, p
+        color: #444
+    &__title,
+    &__content,
+    &__content--article
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        @include media(">=desktop")  
+            max-width: 283px
+            align-items: flex-start
+            margin-right: 114px
+    h5, .promo-text
+        @include media(">=desktop") 
+            text-align: left
+    &__content
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        margin-top: 65px
+        gap: 50px
+        @include media(">=tablet")   
+            gap: 60px 
+            margin-top: 53px
+        @include media(">=desktop") 
+            justify-content: space-between
+            margin-top: 0
+    &__content--article
+        gap: 19px
+        max-width: 252px
+        text-align: center
+        h6
+            font-size: 20px
+            line-height: 23px
+            @include media(">tablet")
+                font-size: 19px
+                line-height: 25px
+        img
+            height: 53px
+            width: auto
+        @include media(">=660px")
+            text-align: left
+            align-items: flex-start
+        @include media(">=desktop")  
+            max-width: 280px
+    .promo-text
+        max-width: 100%
+        @include media(">=desktop")  
+            max-width: 209px
+    
+ 
+
+
+        
+
+   
+
+
+    

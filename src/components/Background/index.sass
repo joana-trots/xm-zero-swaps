@@ -1,0 +1,52 @@
+@import ../../styles/_vars
+.image-bg
+    &--intersect-left
+        background-position: -24vw top
+        max-height: 800px
+        background-image: url('../../assets/images/intersect-left-mobile.svg')
+        @include media(">phone")
+            background-image: url('../../assets/images/intersect-left-tablet.svg')
+        @include media(">=desktop")
+            background-image: url('../../assets/images/intersect-left-desktop.svg')
+
+    &--intersect-right
+        background-position: right -24vw top
+        max-height: 900px
+        top: 500px
+        background-image: url('../../assets/images/intersect-right-mobile.svg')
+        z-index: -3
+        @include media(">phone")
+            background-image: url('../../assets/images/intersect-right-tablet.svg')
+        @include media(">=desktop")
+            background-position: right -17vw top
+            background-image: url('../../assets/images/intersect-right-desktop.svg')
+    &--sprite-1
+        background-position: left
+        max-height: 727px
+        background-image: url('../../assets/images/sprite1-mobile.png')
+        top: 1500px
+        left: -200px
+        z-index: -2
+        @include media(">phone")
+            max-height: 727px
+            top: calc( 100vh + 90px )
+            left: -300px
+            background-image: url('../../assets/images/sprite1-tablet.png')
+        @include media(">=desktop")
+            background-image: url('../../assets/images/sprite1-desktop.png')
+    &--sprite-2
+        background-position: right top
+        background-image: url('../../assets/images/sprite3-mobile.png')
+        background-size: contain
+        top: 100vh
+        right: -36px
+        width: 172px
+        z-index: -2
+        @include media(">phone")
+            width: 100vw
+            top: 700px
+            right: 0
+            background-image: url('../../assets/images/sprite2-tablet.svg')
+        @include media(">=desktop")
+            background-image: url('../../assets/images/sprite2-desktop.svg')
+            

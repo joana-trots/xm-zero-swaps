@@ -1,0 +1,141 @@
+@import ../../../styles/_vars
+
+.whyTrade 
+    .container
+        padding-top: 70px
+        @include media(">phone", "<=tablet")
+            max-width: 530px
+            padding: 70px 0 0
+        @include media(">tablet")
+            padding-top: 90px
+    &__title
+        display: flex
+        flex-direction: column
+        align-items: center
+    .promo-text
+        font-size: 14px
+        line-height: 20px
+        max-width: 280px
+        margin-top: 0
+        @include media(">phone")
+            max-width: 642px
+            line-height: 22px
+    &__pannels
+        margin-top: 60px
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 25px
+        @include media(">=1080px")
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            grid-column-gap: 20px
+            grid-row-gap: 20px
+            margin-top: 32px
+        @include media(">tablet", "<1180px")
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+        @include media(">tablet")
+            align-items: stretch
+.whyTrade__pannel-item
+    position: relative
+    background-color: #0B0819
+    border-radius: 10px
+    padding: 40px
+    max-width: 100%
+    h6
+        max-width: 175px
+    p
+        max-width: 305px
+    &--1,
+    &--2,
+    &--3,
+    &--4 
+        img
+            position: absolute
+            height: 58px
+            top: 19px
+            right: 19px
+    @include media(">phone")
+        p
+            max-width: 405px
+    @include media(">1180px")
+        padding: 57px 51px
+        h6
+            max-width: 225px
+        &--1 
+            grid-area: 1 / 1 / 3 / 2
+            img
+                width: 100px
+                height: auto
+                top: auto
+                right: auto
+                bottom: 25px
+                left: 42px
+        &--2
+            grid-area: 1 / 2 / 2 / 4
+            img
+                width: 98px
+                height: auto
+                top: 28px
+                right: 26px
+        &--3
+            grid-area: 2 / 2 / 3 / 3
+            img
+                height: 74px
+                top: 28px
+                right: 26px
+        &--4
+            grid-area: 2 / 3 / 3 / 4
+            img
+                height: 75px
+                top: 28px
+                right: 26px
+    @include media("<=1180px", ">phone")
+        &--1 img
+            height: 90px
+            top: 28px
+            right: 26px
+        &--2 img
+            height: 90px
+            top: 28px
+            right: 26px
+        &--3 img
+            height: 74px
+            top: 28px
+            right: 26px
+        &--4 img
+                height: 75px
+                top: 28px
+                right: 26px
+    @include media(">tablet", "<=1180px")
+        &--1 
+            grid-area: 1 / 1 / 2 / 2
+            img
+                height: 90px
+                top: 28px
+                right: 26px
+        &--2
+            grid-area: 1 / 2 / 2 / 3
+            img
+                height: 70px
+                top: 28px
+                right: 26px
+        &--3
+            grid-area: 2 / 1 / 3 / 2
+            img
+                height: 74px
+                top: 28px
+                right: 26px
+        &--4
+            grid-area: 2 / 2 / 3 / 3
+            img
+                height: 75px
+                top: 28px
+                right: 26px
+    
+    
+        
+        

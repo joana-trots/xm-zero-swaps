@@ -1,0 +1,17 @@
+@import ../../styles/_vars
+
+.header__inner
+    flex-direction: row
+    @include media(">tablet")
+        justify-content: space-between
+        padding: 0 54px 0 30px
+.menu
+    display: none
+    @include media(">tablet")
+        display: block
+    &__list
+        display: flex
+        gap: 40px
+    &__list--link
+        font-size: 15px
+        line-height: 18px

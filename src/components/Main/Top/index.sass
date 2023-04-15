@@ -1,0 +1,61 @@
+@import ../../../styles/_vars
+
+.top
+    position: relative
+    overflow-x: hidden
+    .container
+        padding: 80px 0 83px
+        @include media(">phone")
+            padding: 100px 0 100px
+        @include media(">tablet")
+            padding: 128px 0 163px
+.top__inner
+    text-align: center
+    align-items: center
+    p:nth-last-child(2)
+        font-size: 14px
+    @include media(">phone")
+        p:nth-last-child(-n+2)
+            line-height: 14px  
+    .btn
+        margin: 30px auto 15px
+        @include media(">phone")
+            width: 345px
+            margin: 25px auto 25px
+        @include media(">tablet")
+            margin: 30px auto
+h1
+    max-width: 260px
+    @include media(">phone")
+        max-width: 500px
+    @include media(">tablet")
+        max-width: 621px
+
+.top__image-bg
+    &--tint
+        background: linear-gradient(180deg, rgba(32, 46, 71, 0.65) 36.53%, rgba(32, 46, 71, 0.6175) 57.69%, rgba(32, 46, 71, 0.585) 78.84%, rgba(32, 46, 71, 0) 100%)
+        mix-blend-mode: multiply
+        z-index: -2
+    &--sprite-left
+        background-image: url('../../../assets/images/bg-mobile-top.png')
+        background-position: top center
+        background-repeat: no-repeat
+        background-size: contain
+        z-index: -3
+        width: 117vw
+        @include media(">phone")
+            width: 100%
+            background-position: -9vw top
+            background-image: url('../../../assets/images/top-sprite-left-tablet.png')
+        @include media(">tablet")
+            background-image: url('../../../assets/images/top-sprite-left-desktop.png')
+    &--sprite-right
+        @include media(">phone")
+            background-repeat: no-repeat
+            background-size: contain
+            z-index: -3
+            background-position: right -14vw top
+            background-image: url('../../../assets/images/top-sprite-right-tablet.png')
+        @include media(">=desktop")
+            background-position: right -9vw top
+            background-image: url('../../../assets/images/top-sprite-right-desktop.png')

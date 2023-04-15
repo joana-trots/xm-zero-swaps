@@ -1,0 +1,100 @@
+@import ../../../styles/_vars
+
+.currency .container
+    padding: 16px 0 0
+    @include media(">phone")
+        padding-top: 25px
+    @include media(">tablet")
+        padding: 32px 20px 0
+.currency__inner
+    gap: 18px
+    flex-wrap: wrap
+    @include media(">phone")
+        flex-direction: row
+        
+.currency__card
+    display: flex
+    flex-direction: column
+    padding: 14px 14px 17px
+    background: rgba(140, 140, 140, 0.1)
+    mix-blend-mode: normal
+    border: 1px solid rgba(167, 167, 167, 0.2)
+    border-radius: 14px
+    width: 236px
+    text-shadow: 0px 0px 50px rgba(255, 177, 43, 0.941)
+    @include media(">phone")
+        width: 209px
+    @include media(">tablet")
+        width: 205px
+    &--header
+        display: flex
+        align-items: center
+        padding-bottom: 22px
+    &--icon
+        width: 34px
+        height: 34px
+        margin-right: 12px
+        border-radius: 100%
+        background-position: center
+        background-repeat: no-repeat
+    &--symbol
+        margin-right: 8px
+        font-weight: 500
+        font-size: 12px
+        line-height: 120%
+        @include media(">tablet")
+            font-size: 13px
+    &--name
+        font-size: 8.5px
+        font-weight: 500
+        color: $black
+        background-color: #FFF8D6
+        line-height: 120%
+        padding: 3px 8px
+        border-radius: 4px
+        
+    &--BTC
+        .currency__card--icon
+            background-color: #F7931A
+            background-image: url(../../../assets/icons/btc.svg)
+    &--ETH
+        .currency__card--icon
+            background-color: #3E7DDD
+            background-image: url(../../../assets/icons/eth.svg)
+    &--XRP
+        .currency__card--icon
+            background-color: #907EFF
+            background-image: url(../../../assets/icons/xrp.svg)
+    &--LTC
+        .currency__card--icon
+            background-color: #EA6262
+            background-image: url(../../../assets/icons/ltc.svg)
+    &--BCH
+        .currency__card--icon
+            background-color: #77BF00
+            background-image: url(../../../assets/icons/bch.svg)      
+    &--divider
+        border-color: rgba(255, 255, 255, 0.15)
+    &--price
+        font-weight: 700
+        font-size: 19px
+        line-height: 23px
+        color: $white
+        margin: 13px 0 9px
+    &--percent
+        font-size: 12px
+        line-height: 120%
+        @include media(">tablet")
+            font-size: 13px
+        &::before
+            display: inline-block
+            width: 8px
+            margin-right: 4px
+    .percent--up
+        color: $light-green
+        &::before
+            content: url(../../../assets/icons/arrow-up-icon.svg)
+    .percent--down
+        color: $light-red
+        &::before
+            content: url(../../../assets/icons/arrow-down-icon.svg)

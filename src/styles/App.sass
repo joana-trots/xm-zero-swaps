@@ -1,0 +1,215 @@
+@import _vars
+@import _responsive
+*,
+*::after,
+*::before
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+html, 
+body
+    scroll-behavior: smooth
+    font-display: fallback
+body
+    background-color:#201D27
+    @extend %default-font
+    overflow-x: hidden
+li
+    list-style: none
+a
+    text-decoration: none
+    color: inherit
+    &:hover
+        cursor: pointer
+b, strong
+    font-weight: 700
+.wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    min-height: 100%
+.header
+    position: sticky
+    position: -webkit-sticky
+    position: -moz-sticky
+    position: -o-sticky
+    position: -ms-sticky
+    top: 0
+    background-color: $white
+    z-index: 2
+    background-color: $black
+    height: 95px
+    padding: 23px 0
+    display: flex
+    align-items: center
+    @include media(">phone")
+        height: 94px
+    @include media(">tablet")
+        height: 113px
+.main
+    flex: 1 0 auto
+.footer
+    flex: 0 0 auto
+    display: flex
+    align-items: center
+    background-color: $black
+    height: 225px
+    @include media(">phone")
+        height: 164px
+    @include media(">=1024px")
+        height: 257px
+.container
+    width: 100%
+    max-width: 290px
+    margin: 0 auto
+    padding: 0 10px
+    @include media(">phone")
+        max-width: 666px
+        margin: 0 auto
+    @include media(">tablet")
+        max-width: 1400px
+        margin: 0 auto
+        padding: 0 100px
+[class$='__inner']
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+h1
+    font-family: 'Roboto', sans-serif
+    font-size: 28px
+    line-height: 38px
+    font-weight: 400
+    color: $white
+    text-align: center
+    @include media(">phone")
+        line-height: 35px
+    @include media(">tablet")
+        font-size: 35px
+        line-height: 42px
+h2
+    font-family: 'Roboto', sans-serif
+    font-size: 32px
+    line-height: 43px
+    font-weight: 300
+    color: $white
+    text-align: center
+    @include media(">tablet")
+        font-size: 35px
+h3
+    font-family: 'Roboto', sans-serif
+    font-size: 24px
+    line-height: 27px
+    font-weight: 700
+    text-align: center
+    @include media(">phone")
+        font-size: 34px
+        line-height: 38px
+h4
+    font-family: 'Roboto', sans-serif
+    font-size: 24px
+    line-height: 39px
+    font-weight: 800
+    text-align: center
+    @include media(">phone")
+        font-size: 30px
+h5
+    font-family: 'Roboto', sans-serif
+    font-size: 35px
+    line-height: 48px
+    font-weight: 900
+    letter-spacing: -0.02em
+    color: #444444
+    .red-text
+        font-weight: 700
+    @include media(">phone", "<=tablet")
+        font-size: 42px
+        .red-text
+            font-weight: 900
+    @include media(">tablet")
+        font-size: 80px
+        line-height: 90px
+h6
+    font-family: 'Roboto', sans-serif
+    font-size: 20px
+    line-height: 25px
+    font-weight: 700
+    @include media(">phone")
+        font-size: 25px
+        line-height: 30px
+p
+    @extend %default-font
+.small-text
+    font-size: 12px
+    line-height: 18px
+.btn
+    display: block
+    width: 100%
+    height: 40px
+    padding: 7px 77px
+    background-color: $green
+    border: none
+    @extend %btn-font
+    &:hover
+        cursor: pointer
+    &:disabled
+        cursor: not-allowed
+    @include media(">phone")
+        padding: 7px 92px
+.red-text
+    color: $red
+.uptitle
+    font-size: 16px
+    line-height: 40px
+    text-transform: uppercase
+    margin-bottom: 20px
+    color: #ddd
+    letter-spacing: 1px
+    @include media(">phone")
+        margin-bottom: 25px
+.promo-text
+    text-align: center
+    margin-top: 30px
+    max-width: 245px
+    @include media(">phone")
+        max-width: 403px
+    @include media(">tablet")
+        max-width: 463px    
+.small-text
+    margin-top: 15px
+    line-height: 18px
+input
+    outline: 0
+    border: none
+    appearance: none
+    -moz-appearance: none
+    -webkit-appearance: none
+.underline
+    text-decoration: underline
+.divider
+    border: 1px solid $green
+    width: 70px
+    margin: 25px 0
+    &--red
+        width: 40px
+        border: 2px solid $red
+        margin-bottom: 22px
+        @include media(">=desktop")
+            width: 72px
+.display-none
+    display: none
+.display-block
+    display: block
+.bg
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+.bg-img
+    position: absolute
+    height: 100%
+    width: 100%
+    background-position: top
+    background-repeat: no-repeat
+    background-size: contain
+    overflow: hidden

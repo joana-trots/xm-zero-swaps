@@ -1,0 +1,179 @@
+@import ../../../styles/_vars
+
+.reg
+    .container
+        max-width: 260px
+        padding: 70px 0 70px
+        @include media(">phone")
+            max-width: 290px
+        @include media(">=660px")
+            max-width: 620px
+        @include media(">tablet")
+            padding: 90px 0 90px
+            max-width: 680px
+    &__title
+        display: flex
+        flex-direction: column
+        align-items: center
+        p
+            line-height: 21px
+            margin-top: 35px
+            max-width: 260px
+            text-align: center
+            @include media(">phone")
+                max-width: 477px
+            @include media(">tablet")
+                margin-top: 40px
+.reg__info
+    display: flex
+    flex-direction: column
+    font-size: 15px
+    line-height: 18px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: center
+    margin-top: 36px
+    min-width: 100%
+    width: 100%
+    &--date,
+    &--time,
+    &--address
+        display: flex
+        flex-direction: column
+        padding: 20px 10px
+        width: 100%
+    @include media(">phone")
+        padding: 20px 
+    &--time
+        border-top: 1px solid $white
+        border-bottom: 1px solid $white    
+    img
+        height: 30px
+        margin-bottom: 14px
+    @include media(">=660px")
+        flex-direction: row
+        border-top: 1px solid $white
+        border-bottom: 1px solid $white
+        font-size: 16px
+        margin-top: 50px
+        &--date,
+        &--time,
+        &--address
+            padding: 24px
+        img
+            margin-bottom: 14px
+        &--date
+            width: 33%
+        &--time
+            border-left: 1px solid $white
+            border-right: 1px solid $white
+            border-top: 0
+            border-bottom: 0
+            width: 25%
+        &--address
+            padding-right: 0
+            width: 45%
+    @include media(">tablet")
+        &--date
+            width: 33%
+        &--time
+            width: 27%
+        &--address
+            width: 45%
+    address
+        font-style: normal
+        @include media(">tablet")
+            max-width: 250px
+
+.reg__form,
+.reg__form--field
+    display: flex
+    flex-direction: column
+.reg__form--field
+    gap: 10px
+.reg__form
+    margin-top: 58px
+    width: 100%
+    gap: 15px
+    @include media(">phone", "<desktop")
+        max-width: 454px
+    label
+        font-size: 14px
+        line-height: 16px
+        font-weight: 700
+    input
+        height: 40px
+    [name="email"],
+    [name="password"]
+        background-color: #f7f7f7
+        border: 1px solid #A9A9A9
+        padding: 12px 6px
+        @extend %default-font
+        color: $black
+        line-height: normal
+        font-size: 14px
+    .btn
+        margin-top: 40px
+        &:disabled
+            background-color: #ccc
+.form__validation
+    font-size: 10px
+    line-height: 12px
+    li:not(:last-child)
+        margin-bottom: 7px
+    @include media(">phone")
+        font-size: 12px
+        line-height: 14px
+    &--email span
+        display: none        
+    span
+        color: $grey
+        &::before
+            content: ""
+            width: 9px
+            height: 9px
+            display: inline-block
+            border-radius: 100%
+            margin-right: 8px
+            border: 3px solid $grey
+
+
+        
+
+input:valid[focused="true"]
+    border: 1px solid $green
+    background-color: $white
+input:invalid[focused="true"]
+    border: 1px solid $red
+    background-color: $white
+    & + span.not-validated
+        color: $red
+    & + span.validated
+        color: $green
+    & + .form__validation--email span
+        display: block
+        color: $red
+        &::before
+            border: 3px solid $red
+        &.not-validated
+            color: $red
+        &.not-validated::before
+            border: 3px solid $red
+
+input[name="password"][focused="true"]
+    & + .form__validation span.validated
+        color: $green
+    & + .form__validation span.validated::before
+        border: 3px solid $green
+    & + .form__validation span.not-validated
+        color: $red
+    & + .form__validation span.not-validated::before
+        border: 3px solid $red
+
+
+
+.reg__links
+    font-size: 14px
+    text-align: center
+    p
+        margin-top: 25px
