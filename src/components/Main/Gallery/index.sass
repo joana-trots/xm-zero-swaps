@@ -16,6 +16,8 @@ h4
 .gallery__carousel
     max-width: 290px
     margin: 40px auto 0
+    @include media("<400px")
+        max-width: 240px
     @include media(">680px")
         max-width: 500px
     @include media(">tablet")
@@ -36,7 +38,7 @@ h4
     box-shadow: 0 0 0px .5px #7f7f7f
     font-size: 4em
     font-weight: 900
-    color: #c8c8c8
+    color: #c8c8c8        
     @include media(">tablet")
         width: 125px
         height: 125px
@@ -64,6 +66,8 @@ h4
     right: -30px !important
 .slick-prev, .slick-next   
     @include media("<680px")
-        transform: scale(.9) !important
+        transform: scale(.9) translate(0, -50%) !important
+    @include media("<400px")
+        transform: scale(.7) translate(0, -50%) !important
 
     
