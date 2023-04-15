@@ -9,7 +9,6 @@
 html, 
 body
     scroll-behavior: smooth
-    font-display: fallback
 body
     background-color:#201D27
     @extend %default-font
@@ -30,10 +29,10 @@ b, strong
     min-height: 100%
 .header
     position: sticky
-    position: -webkit-sticky
-    position: -moz-sticky
-    position: -o-sticky
-    position: -ms-sticky
+    // position: -webkit-sticky
+    // position: -moz-sticky
+    // position: -o-sticky
+    // position: -ms-sticky
     top: 0
     background-color: $white
     z-index: 2
@@ -182,8 +181,6 @@ input
     outline: 0
     border: none
     appearance: none
-    -moz-appearance: none
-    -webkit-appearance: none
 .underline
     text-decoration: underline
 .divider
