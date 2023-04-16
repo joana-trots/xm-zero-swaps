@@ -1,6 +1,7 @@
 import './index.sass';
-
+import useScrollPosition from '../../ScrollPosition/scrollPosition';
 const Top = () => {
+    const pos = useScrollPosition(-0.25);
     return <> 
         <section className="top">
             <div className="container">
@@ -15,8 +16,8 @@ const Top = () => {
             </div>
             <div className='bg-top'>
                 <div className='top__image-bg--tint bg-img'></div>
-                <div className='top__image-bg--sprite-left bg-img'></div>
-                <div className='top__image-bg--sprite-right bg-img'></div>
+                <div className='top__image-bg--sprite-left bg-img' style={{ backgroundPositionY: pos }}></div>
+                <div className='top__image-bg--sprite-right bg-img' style={{ backgroundPositionY: pos }}></div>
             </div>
         </section>
         
