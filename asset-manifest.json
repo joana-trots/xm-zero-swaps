@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/xm-zero-swaps/static/css/main.dcbd698a.css",
-    "main.js": "/xm-zero-swaps/static/js/main.07490ba2.js",
+    "main.css": "/xm-zero-swaps/static/css/main.a287233b.css",
+    "main.js": "/xm-zero-swaps/static/js/main.16c855b3.js",
     "static/js/787.b665f673.chunk.js": "/xm-zero-swaps/static/js/787.b665f673.chunk.js",
     "static/media/top-sprite-right-desktop.png": "/xm-zero-swaps/static/media/top-sprite-right-desktop.e7eae8db7292db1dc4c3.png",
     "static/media/top-sprite-right-tablet.png": "/xm-zero-swaps/static/media/top-sprite-right-tablet.ab753371730ca73f178e.png",
@@ -58,12 +58,12 @@
     "static/media/ltc.svg": "/xm-zero-swaps/static/media/ltc.255490918ef59a877efd.svg",
     "static/media/arrow-up-icon.svg": "/xm-zero-swaps/static/media/arrow-up-icon.f1511f6b84d45b2513d9.svg",
     "static/media/arrow-down-icon.svg": "/xm-zero-swaps/static/media/arrow-down-icon.31ef875a5d79b6ce404d.svg",
-    "main.dcbd698a.css.map": "/xm-zero-swaps/static/css/main.dcbd698a.css.map",
-    "main.07490ba2.js.map": "/xm-zero-swaps/static/js/main.07490ba2.js.map",
+    "main.a287233b.css.map": "/xm-zero-swaps/static/css/main.a287233b.css.map",
+    "main.16c855b3.js.map": "/xm-zero-swaps/static/js/main.16c855b3.js.map",
     "787.b665f673.chunk.js.map": "/xm-zero-swaps/static/js/787.b665f673.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcbd698a.css",
-    "static/js/main.07490ba2.js"
+    "static/css/main.a287233b.css",
+    "static/js/main.16c855b3.js"
   ]
 }
