@@ -103,8 +103,8 @@
         font-weight: 700
     input
         height: 40px
-    [name="email"],
-    [name="password"]
+    input[name="email"],
+    input[name="password"]
         background-color: #f7f7f7
         border: 1px solid #A9A9A9
         padding: 12px 6px
@@ -140,37 +140,39 @@
 
         
 
-input:valid[focused="true"]
-    border: 1px solid $green
-    background-color: $white
-input:invalid[focused="true"]
-    border: 1px solid $red
-    background-color: $white
-    & + span.not-validated
-        color: $red
-    & + span.validated
-        color: $green
-    & + .form__validation--email span
-        display: block
-        color: $red
-        &::before
-            border: 3px solid $red
-        &.not-validated
+input[name="email"],
+input[name="password"]
+    &:valid
+        border: 1px solid $green
+        background-color: $white
+    &:invalid[focused="true"]
+        border: 1px solid $red
+        background-color: $white
+        & + span.not-validated
             color: $red
-        &.not-validated::before
-            border: 3px solid $red
+        & + span.validated
+            color: $green
+        & + .form__validation--email span
+            display: block
+            color: $red
+            &::before
+                border: 3px solid $red
+            &.not-validated
+                color: $red
+            &.not-validated::before
+                border: 3px solid $red
 
 input[name="password"][focused="true"]
-    & + .form__validation span.validated
-        color: $green
-    & + .form__validation span.validated::before
-        border: 3px solid $green
     & + .form__validation span.not-validated
         color: $red
     & + .form__validation span.not-validated::before
         border: 3px solid $red
 
-
+input[name="password"]
+    & + .form__validation span.validated
+        color: $green
+    & + .form__validation span.validated::before
+        border: 3px solid $green
 
 .reg__links
     font-size: 14px

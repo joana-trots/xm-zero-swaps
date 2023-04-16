@@ -15,7 +15,7 @@ const Registration = () => {
     const [specialValidated, setSpecialValidated] = useState(false);
 
     const handleChangeEmail = (value) => {
-        const email = new RegExp('(?=.+@.+\..+.{1,4})');
+        const email = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
         if(email.test(value)) setEmailValidated(true);
         else setEmailValidated(false);
     }
@@ -25,7 +25,7 @@ const Registration = () => {
         const number = new RegExp('(?=.*[0-9])');
         const lower = new RegExp('(?=.*[a-z])');
         const upper = new RegExp('(?=.*[A-Z])');
-        const special = new RegExp('(?=.*[!@#$%^&*-+])');
+        const special = new RegExp('(?=.*[!@#$^&*()\\]\\[.,?+=_\\\\\/\\|-])');
 
         if(length.test(value)) setLengthValidated(true);
         else setLengthValidated(false);
@@ -42,10 +42,13 @@ const Registration = () => {
         if(special.test(value)) setSpecialValidated(true);
         else setSpecialValidated(false);
     }
-    const [focused, setFocused] = useState(false);
-    const handleFocus = (e) => {
-        setFocused(true);
-    }
+
+    const [focusedEmail, setFocusedEmail] = useState(false);
+    const handleFocusEmail = () => {setFocusedEmail(true);}
+
+    const [focusedPassword, setFocusedPassword] = useState(false);
+    const handleFocusPassword = () => {setFocusedPassword(true);}
+
     const [visible, setVisible] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -78,9 +81,9 @@ const Registration = () => {
                         <div className="reg__form--field">
                             <label htmlFor='email'>Email:</label>
                             <input type="email" name="email" required
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,4}$"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             onChange={(e) => handleChangeEmail(e.target.value)}
-                            onBlur={handleFocus} focused={focused.toString()} />
+                            onBlur={handleFocusEmail} focused={focusedEmail.toString()} />
                             <div className="form__validation form__validation--email">
                                 <span className={emailValidated ? 'validated' : 'not-validated'}>Please Enter Valid Email</span>
                             </div>
@@ -88,11 +91,11 @@ const Registration = () => {
                         <div className="reg__form--field">
                             <label htmlFor='password'>Password:</label>
                             <input type="password" name="password" required 
-                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#$%^&*_=+-]).{8,15}$"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*+=?\|\]\[\(\)\-/]).{8,}"
                             maxLength={15}
                             onChange={(e) => handleChangePassword(e.target.value)}
-                            onBlur={handleFocus} focused={focused.toString()}
-                             />
+                            onBlur={handleFocusPassword} focused={focusedPassword.toString()}
+                            />
                             
                             <div className="form__validation">
                                 <ul>
@@ -100,7 +103,7 @@ const Registration = () => {
                                     <li><span className={numberValidated ? 'validated' : 'not-validated'}>1 or more numbers</span></li>
                                     <li><span className={lowerValidated ? 'validated' : 'not-validated'}>1 or more lower case letters</span></li>
                                     <li><span className={upperValidated ? 'validated' : 'not-validated'}>1 or more upper case letters</span></li>
-                                    <li><span className={specialValidated ? 'validated' : 'not-validated'}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)s</span></li>
+                                    <li><span className={specialValidated ? 'validated' : 'not-validated'}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</span></li>
                                 </ul>
                             </div>
                         </div>
